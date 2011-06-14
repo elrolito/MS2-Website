@@ -80,7 +80,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
 Kohana::init(array(
-	'base_url'   => (Kohana::$environment === Kohanan::PRODUCTION) ? '/' : '/ms2/update/',
+	'base_url'   => (Kohana::$environment === Kohana::PRODUCTION) ? '/' : '/ms2/update/',
 	'index_file' => FALSE,
 	'errors'     => Kohana::$environment !== Kohana::PRODUCTION,
 	'profile'    => Kohana::$environment !== Kohana::PRODUCTION,
@@ -110,14 +110,19 @@ Kohana::modules(array(
 	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
 	// 'unittest'   => MODPATH.'unittest',   // Unit testing
 	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+	'kostache'   => MODPATH.'kostache'
 	));
 
 /**
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
+Route::set('home', '')
+	->defaults(array(
+		'controller' => 'home'
+	));
 Route::set('default', '(<controller>(/<action>(/<id>)))')
 	->defaults(array(
-		'controller' => 'welcome',
+		'controller' => 'home',
 		'action'     => 'index',
 	));

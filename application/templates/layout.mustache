@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>{{title}}</title>
+	
+	<link rel="stylesheet" type="text/css" href="{{stylesheet}}" media="all">
+	
+	<script type="text/javascript" src="http://use.typekit.com/ynv3xbj.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
+	<!--[if lt IE 9]>
+	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="wrapper drop-shadow lifted" id="top">
+		<div id="logo"><b>MS2 Productions</b>: <em>Passionate about the power of video</em></div>
+		<a href="#content" class="hide">skip to content</a>
+		<nav>
+			<ul>
+			{{#nav}}
+				{{>nav_link}}
+			{{/nav}}
+			</ul>
+		</nav>
+		<div id="post-it">
+			<div class="inner curved lifted">
+				<div class="cities">Stratford / Guelph / London</div>
+				<div class="contact">519-276-0006 / {{&contact_email}}</div>
+				<ul class="social">
+		            <li class="facebook"><a href="http://bit.ly/MS2FanPage" rel="external" title="MS2 Fan Page">Facebook</a></li>
+					<li class="twitter"><a href="http://twitter.com/ms2weathergirl" rel="external" title="@ms2weathergirl on Twitter">Twitter</a></li>
+					<li class="youtube"><a href="http://www.youtube.com/user/ms2dotca" rel="external" title="ms2dotca YouTube Channel">YouTube</a></li>
+					<li class="vimeo"><a href="http://vimeo.com/ms2" rel="external social" title="ms2 Vimeo Channel">Vimeo</a></li>
+					<li class="linkedin"><a href="http://www.linkedin.com/in/ms2productions" rel="external" title="MS2 Productions LinkedIn Profile">LinkedIn</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<header id="page-header" class="wrapper drop-shadow lifted">
+		{{>header}}
+	</header>
+	<div class="wrapper" id="content">
+		{{>content}}
+	</div>
+	<footer id="page-footer" class="drop-shadow curved curved-hz-2">
+		<div class="wrapper">
+			<a href="#top">[^] back to top</a>
+			<p id="copyright">Copyright © {{year}} MS2 Production.</p>
+		</div>
+	</footer>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script src="{{main_script}}"></script>
+</body>
+</html>
