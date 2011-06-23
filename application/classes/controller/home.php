@@ -26,5 +26,12 @@ class Controller_Home extends Controller_Layout {
 		}
 		
 		$this->view->set('tweets', $tweets);
+		
+		$ms2ube_data = Request::factory('youtube/playlist/AA821F2D7F066FBD')
+		                          ->execute()
+		                          ->body();
+		                          
+		$model = new Model_YouTube_Playlist('AA821F2D7F066FBD', $ms2ube_data);
+		$this->view->ms2ube_playlist = $model->playlist_info();
 	}
 }

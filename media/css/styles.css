@@ -280,6 +280,10 @@ nav ul {
 	padding: 20px 0;
 }
 
+#playlist {
+	display: none;
+}
+
 #twitter-profile { 
 	margin-bottom: 10px;
 	padding-left: 60px; 

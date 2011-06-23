@@ -8,37 +8,17 @@ class Controller_Youtube extends Controller {
 		
 		if ($id)
 		{
-			$playlist = Kohana::cache('playlist_'.$id);
+			$playlist = Cache::instance()->get('playlist_'.$id);
 			
 			if ( ! $playlist)
 			{
 				try
 				{
-					$json = Request::factory('http://gdata.youtube.com/feeds/api/playlists/'.$id.'?v=2&alt=jsonc&orderby=published')
+					$playlist = Request::factory('http://gdata.youtube.com/feeds/api/playlists/'.$id.'?v=2&alt=jsonc&orderby=published')
 					               ->execute()
 					               ->body();
-					               
-					$feed = json_decode($json);
 					
-					$playlist = array();
-					
-					foreach ($feed->data->items as $item)
-					{
-						$video_src = 'http://www.youtube.com/watch?v='.$item->video->id;
-						
-						$playlist[] = array(
-							0 => array(
-								'src' => $video_src, 
-								'type' => 'video/youtube',
-							),
-							'config' => array(
-								'title' => $item->video->title,
-								'desc' => Text::auto_p($item->video->description)
-							)
-						);
-					}
-					
-					Kohana::cache('playlist_'.$id, $playlist, 5000);
+					Cache::instance()->set('playlist_'.$id, $playlist, 5000);
 				}
 				catch (Exception $e)
 				{
@@ -46,8 +26,33 @@ class Controller_Youtube extends Controller {
 				}
 			}
 			
-			$this->response->headers('Content-Type', 'application/json');
-			$this->response->body(json_encode($playlist));
+			if ($this->request->is_ajax())
+			{
+				$model = new Model_YouTube_Playlist($id, $playlist);
+				$body = json_encode($model->projekktor_playlist());
+			}
+			else
+			{
+				$body = $playlist;
+			}
+			
+			$this->response->body($body);
 		}
+	}
+	
+	public function after()
+	{
+		if (isset($_GET['debug']))
+		{
+			$body = Debug::vars(json_decode($this->response->body()));
+			$this->response->headers('Content-Type', 'text/html');
+			$this->response->body($body);
+		}
+		else
+		{
+			$this->response->headers('Content-Type', 'application/json');
+		}
+		
+		parent::after();
 	}
 }

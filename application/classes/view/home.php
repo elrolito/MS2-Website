@@ -6,4 +6,5 @@ class View_Home extends View_Layout {
 	
 	public $twitter_profile;
 	public $tweets;
+	public $ms2ube_playlist;
 }
