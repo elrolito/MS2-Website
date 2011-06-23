@@ -1,3 +1,37 @@
-<section id="home-videos">
-
+<section id="ms2ube-tv" class="block">
+	<header class="tab">
+		<h2>ms2ube TV</h2>
+	</header>
+	<div id="main-player" class="projekktor"></div>
+	<ul id="playlist">
+	{{#playlist}}
+		<li>{{title}}</li>
+	{{/playlist}}
+	</ul>
+</section>
+<section id="ms2weets" class="block col span-2">
+	<header class="tab">
+		<h2>ms2weets</h2>
+	</header>
+	<div id="twitter-profile">
+	{{#twitter_profile}}<h3>{{name}} (<a href="http://twitter.com/@{{screen_name}}" rel="external">@{{screen_name}}</a>)</h3>
+		<div class="thumb"><a href="http://twitter.com/@{{screen_name}}" rel="external"><img src="{{profile_image_url}}" alt="Twitter profile pic" /></a></div>
+		<p>{{description}}</p>
+	{{/twitter_profile}}
+	</div>
+	<ul class="tweets tk-futura-pt">
+		{{#tweets}}
+			<li class="tweet">
+				<p>{{& text}}</p>
+				<time pubdate="{{created_at}}">{{timestamp}}</time>
+			</li>
+		{{/tweets}}
+	</ul>
+	
+</section>
+<section id="ms2ube-vlog" class="block col span-1">
+	<header class="tab right">
+		<h2>ms2ube Vlog</h2>
+	</header>
+	<div>Mobile videos here</div>
 </section>

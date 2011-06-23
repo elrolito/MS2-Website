@@ -6,6 +6,9 @@ class View_Layout extends Kostache_Layout {
 	
 	public $stylesheet;
 	
+	public $projekktor_styles;
+	public $projekktor_script;
+	
 	public $main_script;	
 	
 	public function year()
