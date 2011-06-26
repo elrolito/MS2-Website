@@ -7,6 +7,7 @@ body {
 	background: #fafaff url(../images/bg.png) repeat left top;
 	color: #022533;
 	font-family: "skolar-1","skolar-2", "Chaparral Pro", Chaparral, Garamond, serif;
+	font-size: 16px;
 	line-height: 1.2;
 }
 
@@ -34,16 +35,24 @@ p {
 	margin: 10px 0; 
 }
 
+.list { 
+	list-style-type: square;
+	margin: 10px 20px;
+}
+.list li { 
+	margin: 5px 0; 
+}
+
 .tab { 
-	margin: 0 0 20px -15px;
+	margin: 0 0 20px -25px;
 	padding: 0 10px 10px 0;
 	overflow: hidden; 
 }
 
 header.right { 
 	
-	margin: 0 -15px 20px 0;
-	padding: 0 0 10px 10px;
+	margin: 0 -25px 20px 0;
+	padding: 0 0 10px 5px;
 }
 
 .right h2 { 
@@ -78,11 +87,11 @@ nav ul {
 }
 
 .span-1 { 
-	width: 320px; 
+	width: 340px; 
 }
 .span-2 {
-	margin-right: 20px; 
-	width: 620px; 
+	margin-right: 36px; 
+	width: 544px; 
 }
 
 .hide {
@@ -91,8 +100,8 @@ nav ul {
 
 .wrapper {
 	margin: 0 auto;
-	padding: 0 10px;
-	width: 960px;
+	padding: 0 20px;
+	width: 920px;
 }
 
 #top,
@@ -263,8 +272,8 @@ nav ul {
 	height: 400px;
 	height: auto !important;
 	min-height: 400px;
-	padding: 20px 10px;
 	overflow: hidden;
+	padding: 20px;
 	-webkit-box-shadow: rgba(0, 92, 128, 0.2) 0 0 4px, rgba(0, 0, 0, 0.4) 0px 15px 10px, rgba(0,0,0,0.1) 0 0 40px inset;
 	        box-shadow: rgba(0, 92, 128, 0.2) 0 0 4px, rgba(0, 0, 0, 0.4) 0px 15px 10px, rgba(0,0,0,0.1) 0 0 40px inset;
 	-webkit-border-top-left-radius: 4px;
@@ -280,8 +289,46 @@ nav ul {
 	padding: 20px 0;
 }
 
+#ms2ube-tv { 
+	position: relative; 
+}
+
+#main-player { 
+	margin-left: -20px; 
+}
+
+#ms2ube-share { 
+	bottom: 575px;
+	height: 50px;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 5px;
+	right: -60px;
+	width: 200px;
+}
+
+#ms2ube-fb-like, #ms2ube-tweet { 
+	height: 30px; 
+}
+
 #playlist {
-	display: none;
+	height: 60px;
+	list-style: none;
+	margin-bottom: 10px;
+	width: 700px;
+}
+
+#playlist li,
+#playlist p { 
+	display: none; 
+}
+
+#playlist li:first-child { 
+	 display: block;
+}
+
+#playlist h3 { 
+	font-size: 24px; 
 }
 
 #twitter-profile { 
@@ -337,4 +384,79 @@ nav ul {
 
 .wf-active .tweets { 
 	font-weight: 400; 
+}
+
+section { 
+	padding-bottom: 20px; 
+}
+
+#team { 
+	list-style: none;
+	overflow: hidden; 
+}
+
+#team figure { 
+	overflow: hidden;
+	padding: 10px; 
+}
+
+#team li, #team img, #team figcaption { 
+	float: left; 
+}
+
+#team img { 
+	margin-right: 10px;
+	width: 60px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px, rgba(0,0,0,0.2) 0 0 16px inset;
+	        box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px, rgba(0,0,0,0.2) 0 0 16px inset;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#team > li { 
+	margin: 0 30px 10px 0;
+	width: 430px;
+}
+
+#team .role { 
+	font-style: italic; 
+}
+
+#team dt { 
+	color: #1498CD;
+	font-weight: bold; 
+}
+
+#team .social { 
+	overflow: hidden;
+	width: 300px; 
+}
+
+#team .social a {
+	background-position: left 50%;
+	background-repeat: no-repeat;
+	display: block;
+	height: 18px; 
+	overflow: hidden;
+	text-indent: -999px;
+	width: 18px;
+}
+#team .social .email a { 
+	 background-image: url(../images/small-icons/email.png);
+}
+#team .social .twitter a { 
+	background-image: url(../images/small-icons/twitter.png); 
+}
+#team .social .facebook a { 
+	background-image: url(../images/small-icons/facebook.png); 
+}
+#team .social .linkedin a { 
+	 background-image: url(../images/small-icons/linkedin.png);
+}
+#team .social .youtube a { 
+	background-image: url(../images/small-icons/youtube.png); 
+}
+#team .social .vimeo a { 
+	background-image: url(../images/small-icons/vimeo.png); 
 }

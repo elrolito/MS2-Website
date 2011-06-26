@@ -1,3 +1,27 @@
+<section>
+	<header class="tab">
+		<h2>Faces of MS2</h2>
+	</header>
+	<ul id="team">
+		{{#ms2_team}}<li>
+			<figure>
+				<img src="{{photo}}" alt="photo of {{name}}" />
+				<figcaption>
+					<dl>
+						<dt>{{name}}</dt>
+						<dd class="{{short_name}}">
+							<span class="role">{{role}}</span>
+							<ul class="social">
+								{{#email}}<li class="email">{{&obfuscated_email}}</li>{{/email}}
+								{{#social_links}}<li class="{{kind}}"><a href="{{link}}" title="{{title}}">{{title}}</a></li>{{/social_links}}
+							</ul>
+						</dd>
+					</dl>
+				</figcaption>
+			</figure>
+		</li>{{/ms2_team}}
+	</ul>
+</section>
 <section class="block col span-2">
 	<header class="tab">
 		<h2>About MS2</h2>
@@ -18,7 +42,7 @@
 	<header class="tab right">
 		<h2>What we do</h2>
 	</header>
-	<p>That’s simple:</p>
+	<p><strong>That’s simple</strong>:</p>
 	<p>Want to get noticed? No Problem! Our job is to craft a powerful message that speaks to your customers - educates prospects, increases conversions and builds brand equity.</p> 
 	
 	<p>We’ll help you cost effectively brand, network and market your business with the next generation of media, video marketing and corporate storytelling.</p>

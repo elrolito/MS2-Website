@@ -1,6 +1,6 @@
 var playerInstance
 
-jQuery(document).ready(function($) {
+$(document).ready(function() {
 	// resize content area
 	$(window).resize(function() {
 		resizeContentArea()
@@ -9,7 +9,6 @@ jQuery(document).ready(function($) {
 	
 	playerInstance = projekktor('#main-player', {
 		addplugins: ['Share'],
-		useYTIframeAPI: true,
 		controls: true,
 		width: 960,
 		height: 540,
@@ -26,6 +25,9 @@ jQuery(document).ready(function($) {
 updatePlayerItem = function(data) {
 	var index = playerInstance.getItemIdx()
 	updateShareLinks(index)
+	$('#playlist li:visible').fadeOut(500, function() {
+		$('#playlist li').eq(index).delay(200).fadeIn(500)
+	})
 }
 
 resizeContentArea = function() {
