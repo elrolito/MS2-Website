@@ -12,7 +12,7 @@ $(document).ready(function() {
 		controls: true,
 		width: 960,
 		height: 540,
-		playlist: [{ 0 : { src : 'youtube/playlist/AA821F2D7F066FBD', type: 'text/json' }}]
+		playlist: [{ 0 : { src : 'youtube/playlist/' + $('#main-player').attr('data-playlist-id'), type: 'text/json' }}]
 	})
 	
 	playerInstance.addListener('item', updatePlayerItem)

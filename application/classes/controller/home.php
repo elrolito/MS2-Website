@@ -33,5 +33,7 @@ class Controller_Home extends Controller_Layout {
 		                          
 		$model = new Model_YouTube_Playlist('AA821F2D7F066FBD', $ms2ube_data);
 		$this->view->ms2ube_playlist = $model->playlist_info();
+		
+		$this->view->partial('ms2ube_player', 'partials/ms2ube_player');
 	}
 }

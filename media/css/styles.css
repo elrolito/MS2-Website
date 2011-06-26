@@ -460,3 +460,95 @@ section {
 #team .social .vimeo a { 
 	background-image: url(../images/small-icons/vimeo.png); 
 }
+
+#client-list ul { 
+	list-style: none;
+	overflow: hidden; 
+}
+
+#client-list .client {
+	background-position: left top;
+	background-repeat: no-repeat; 
+	display: block;
+	float: left;
+	height: 110px;
+	margin: 0 16px 20px 0;
+	overflow: hidden;
+	text-indent: -999px;
+	width: 290px; 
+}
+#client-list ul li .uwsc {
+  background-image: url(../images/clients/uwsc.png);
+}
+#client-list ul li .cdmn {
+  background-image: url(../images/clients/cdmn.png);
+}
+#client-list ul li .pc {
+  background-image: url(../images/clients/pc.png);
+}
+#client-list ul li .can30 {
+  background-image: url(../images/clients/can30.png);
+}
+#client-list ul li .psic {
+  background-image: url(../images/clients/psic.png);
+}
+#client-list ul li .chefd {
+  background-image: url(../images/clients/chefd.png);
+}
+#client-list ul li .ustripe {
+  background-image: url(../images/clients/ustripeit.png);
+}
+#client-list ul li .sdcc {
+  background-image: url(../images/clients/sdcc.png);
+}
+#client-list ul li .cfnc {
+  background-image: url(../images/clients/cfnc.png);
+}
+#client-list ul li .pcfdc {
+  background-image: url(../images/clients/cfdc_perth.png);
+}
+#client-list ul li .spbcb {
+  background-image: url(../images/clients/spcb.png);
+}
+#client-list ul li .cfdcw {
+  background-image: url(../images/clients/cfdc.png);
+}
+#client-list ul li .mcfdc {
+  background-image: url(../images/clients/cdfc_middlesex.png);
+}
+#client-list ul li .vic {
+  background-image: url(../images/clients/vicwest.png);
+}
+#client-list ul li .medu {
+  background-image: url(../images/clients/meducom.png);
+}
+#client-list ul li .energrow {
+  background-image: url(../images/clients/energrow.png);
+}
+#client-list ul li .crm {
+  background-image: url(../images/clients/crm.png);
+}
+#client-list ul li .manhattans {
+  background-image: url(../images/clients/manhattans.png);
+}
+#client-list ul li .giffen {
+  background-image: url(../images/clients/giffen.png);
+}
+#client-list ul li .teknik {
+  background-image: url(../images/clients/teknik.png);
+}
+#client-list ul li .channers {
+  background-image: url(../images/clients/channers.png);
+}
+#client-list ul li .derma {
+  background-image: url(../images/clients/dermawand.png);
+}
+#client-list ul li .polydoor {
+  background-image: url(../images/clients/polydoor.png);
+}
+#client-list ul li .effed {
+  background-image: url(../images/clients/effed.jpg);
+}
+#client-list ul li .samsonite {
+  background-image: url(../images/clients/samsonite.png);
+}

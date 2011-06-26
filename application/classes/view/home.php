@@ -6,5 +6,7 @@ class View_Home extends View_Layout {
 	
 	public $twitter_profile;
 	public $tweets;
+	
+	public $ms2ube_playlist_id = 'AA821F2D7F066FBD';
 	public $ms2ube_playlist;
 }
