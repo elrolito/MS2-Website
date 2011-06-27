@@ -16,7 +16,7 @@ class Controller_Layout extends Controller {
 	{
 		parent::before();
 		
-		HTML::$windowed_urls = true;
+		HTML::$windowed_urls = TRUE;
 		
 		$controller = $this->request->controller();
 		

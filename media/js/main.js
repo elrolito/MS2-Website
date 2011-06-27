@@ -7,6 +7,8 @@ $(document).ready(function() {
 	
 	resizeContentArea();
 	
+	$('a[rel=external]').attr('target', 'external');
+	
 });
 
 updatePlayerItem = function(data) {
