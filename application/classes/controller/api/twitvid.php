@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_TwitVid extends Controller {
+class Controller_API_TwitVid extends Controller_API_Base {
 	
 	public function action_playlist()
 	{
@@ -43,7 +43,6 @@ class Controller_TwitVid extends Controller {
 			}
 		}
 		
-		$this->response->headers('Content-Type', 'application/json');
 		$this->response->body(json_encode($playlist));
 	}
 }

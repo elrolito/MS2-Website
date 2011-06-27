@@ -16,6 +16,8 @@ class Controller_Layout extends Controller {
 	{
 		parent::before();
 		
+		HTML::$windowed_urls = true;
+		
 		$controller = $this->request->controller();
 		
 		$view_class = 'View_'.ucfirst($controller);

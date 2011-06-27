@@ -1,23 +1,24 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Twitter extends Controller {
+class Controller_API_Twitter extends Controller_API_Base {
 
-	protected $_user_api = 'http://api.twitter.com/1/users/show.json?screen_name=ms2weathergirl';
-	protected $_timeline_api = 'http://api.twitter.com/1/statuses/user_timeline.json?screen_name=ms2weathergirl&trim_user=1&include_entities=1&count=3';
+	protected $_user_api = 'http://api.twitter.com/1/users/show.json';
+	protected $_timeline_api = 'http://api.twitter.com/1/statuses/user_timeline.json';
 	
 	public function action_user()
 	{
-		$twitter_user = Kohana::cache('twitter_user');
+		$twitter_user = Cache::instance()->get('twitter_user');
 		
 		if ( ! $twitter_user)
 		{
 			try
 			{
 				$twitter_user = Request::factory($this->_user_api)
+				                       ->query('screen_name', 'ms2weathergirl')
 				                       ->execute()
 				                       ->body();
 				
-				Kohana::cache('twitter_user', $twitter_user, 5000);
+				Cache::instance()->set('twitter_user', $twitter_user, 5000);
 			}
 			catch (Exception $e)
 			{
@@ -30,17 +31,21 @@ class Controller_Twitter extends Controller {
 	
 	public function action_timeline()
 	{
-		$timeline = Kohana::cache('timeline');
+		$timeline = Cache::instance()->get('timeline');
 		
 		if ( ! $timeline)
 		{
 			try
 			{
 				$timeline = Request::factory($this->_timeline_api)
-				                 ->execute()
-				                 ->body();
+				                   ->query('screen_name', 'ms2weathergirl')
+				                   ->query('trim_user', 1)
+				                   ->query('include_entities', 1)
+				                   ->query('count', 3)
+				                   ->execute()
+				                   ->body();
 				                 
-				Kohana::cache('timeline', $timeline, 1200);
+				Cache::instance()->set('timeline', $timeline, 1200);
 			}
 			catch (Exception $e)
 			{
@@ -79,21 +84,11 @@ class Controller_Twitter extends Controller {
 			}
 			catch (Exception $e)
 			{
-				echo Debug::vars($e);
+				$twitpic = NULL;
 			}
 		}
 		
 		$this->response->headers('Content-Type', 'application/json');
 		$this->response->body(json_encode($twitpic));
-	}
-	
-	public function after()
-	{
-		if ($this->request->is_initial())
-		{
-			$body = $this->response->body();
-		
-			$this->response->body(Debug::vars(json_decode($body)));
-		}
 	}
 }

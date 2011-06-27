@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Controller_Youtube extends Controller {
+class Controller_API_Youtube extends Controller_API_Base {
 	
 	public function action_playlist()
 	{
@@ -14,7 +14,10 @@ class Controller_Youtube extends Controller {
 			{
 				try
 				{
-					$playlist = Request::factory('http://gdata.youtube.com/feeds/api/playlists/'.$id.'?v=2&alt=jsonc&orderby=published')
+					$playlist = Request::factory('http://gdata.youtube.com/feeds/api/playlists/'.$id)
+					               ->query('v', 2)
+					               ->query('alt', 'jsonc')
+					               ->query('orderby', 'published')
 					               ->execute()
 					               ->body();
 					
@@ -38,21 +41,5 @@ class Controller_Youtube extends Controller {
 			
 			$this->response->body($body);
 		}
-	}
-	
-	public function after()
-	{
-		if (isset($_GET['debug']))
-		{
-			$body = Debug::vars(json_decode($this->response->body()));
-			$this->response->headers('Content-Type', 'text/html');
-			$this->response->body($body);
-		}
-		else
-		{
-			$this->response->headers('Content-Type', 'application/json');
-		}
-		
-		parent::after();
 	}
 }
