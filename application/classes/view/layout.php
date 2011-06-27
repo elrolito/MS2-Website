@@ -9,7 +9,16 @@ class View_Layout extends Kostache_Layout {
 	public $projekktor_styles;
 	public $projekktor_script;
 	
+	public $player_script;
+	
 	public $main_script;	
+	
+	public function browser()
+	{
+		$browser = Request::user_agent('browser');
+		
+		return strtolower(str_replace(' ', '-', $browser));
+	}
 	
 	public function year()
 	{

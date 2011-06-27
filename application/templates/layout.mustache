@@ -14,7 +14,7 @@
 	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body class="{{browser}}">
 	<div class="wrapper drop-shadow lifted" id="top">
 		<div id="logo"><b>MS2 Productions</b>: <em>Passionate about the power of video</em></div>
 		<div id="service">Serving North America and Europe since 1999</div>
@@ -66,7 +66,10 @@
 	  }());
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	{{#has_player}}
 	<script src="{{projekktor_script}}"></script>
+	<script src="{{player_script}}"></script>
+	{{/has_player}}
 	<script src="{{main_script}}"></script>
 </body>
 </html>

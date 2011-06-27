@@ -51,6 +51,42 @@ class Controller_Twitter extends Controller {
 		$this->response->body($timeline);
 	}
 	
+	public function action_twitpic()
+	{
+		$twitpic = Cache::instance()->get('twitpic');
+		
+		if ( ! $twitpic)
+		{
+			try
+			{
+				$api = Request::factory('http://api.twitpic.com/2/users/show.json')
+				              ->query('username', 'ms2weathergirl')
+				              ->execute()
+				              ->body();
+				              
+				$data = json_decode($api);
+				
+				$image = $data->images[0];
+				
+				$twitpic = array(
+					'id' => $image->short_id,
+					'title' => $image->message,
+					'timestamp' => $image->timestamp,
+					'fuzzy_time' => Date::fuzzy_span(strtotime($image->timestamp))
+				);
+				
+				Cache::instance()->set('twitpic', $twitpic);
+			}
+			catch (Exception $e)
+			{
+				echo Debug::vars($e);
+			}
+		}
+		
+		$this->response->headers('Content-Type', 'application/json');
+		$this->response->body(json_encode($twitpic));
+	}
+	
 	public function after()
 	{
 		if ($this->request->is_initial())

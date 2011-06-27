@@ -27,13 +27,30 @@ class Controller_Home extends Controller_Layout {
 		
 		$this->view->set('tweets', $tweets);
 		
-		$ms2ube_data = Request::factory('youtube/playlist/AA821F2D7F066FBD')
+		// Get YouTube playlist for ms2ube player
+		$playlist_id = $this->view->ms2ube_playlist_id;
+		
+		$ms2ube_data = Request::factory('youtube/playlist/'.$playlist_id)
 		                          ->execute()
 		                          ->body();
 		                          
-		$model = new Model_YouTube_Playlist('AA821F2D7F066FBD', $ms2ube_data);
+		$model = new Model_YouTube_Playlist($playlist_id, $ms2ube_data);
 		$this->view->ms2ube_playlist = $model->playlist_info();
 		
 		$this->view->partial('ms2ube_player', 'partials/ms2ube_player');
+		
+		// Twitvids (ms2ube mobile)
+		$twitvids = Request::factory('twitvid/playlist')
+		                               ->execute()
+		                               ->body();
+		
+		$this->view->twitvids = json_decode($twitvids);
+		
+		// Twitpic
+		$twitpic = Request::factory('twitter/twitpic')
+		                  ->execute()
+		                  ->body();
+		                  
+		$this->view->twitpic = json_decode($twitpic);
 	}
 }

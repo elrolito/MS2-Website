@@ -8,7 +8,8 @@ class Controller_Layout extends Controller {
 		'stylesheet' => 'media/css/styles.css',
 		'main_script' => 'media/js/main.js',
 		'projekktor_styles' => 'media/projekktor/theme/style.css',
-		'projekktor_script' => 'media/projekktor/projekktor.min.js'
+		'projekktor_script' => 'media/projekktor/projekktor.min.js',
+		'player_script' => 'media/js/player.js'
 	);
 	
 	public function before()
@@ -27,6 +28,7 @@ class Controller_Layout extends Controller {
 			$this->view->main_script = URL::site($this->_paths['main_script'], NULL, FALSE);
 			$this->view->projekktor_styles = URL::site($this->_paths['projekktor_styles'], NULL, FALSE);
 			$this->view->projekktor_script = URL::site($this->_paths['projekktor_script'], NULL, FALSE);
+			$this->view->player_script = URL::site($this->_paths['player_script'], NULL, FALSE);
 			
 			$this->view->partial('header', 'headers/'.$controller.'-header');
 		}

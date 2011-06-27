@@ -18,12 +18,13 @@ h1 {
 	text-transform: uppercase;
 }
 
-h2 {
+.tab h2 {
 	background: #005B80;
 	color: #fff;
 	float: left;
 	font-family: "futura-pt-1","futura-pt-2",sans-serif; 
 	font-size: 28px;
+	margin-right: 10px;
 	padding: 5px 20px 5px 100px;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
@@ -46,7 +47,13 @@ p {
 .tab { 
 	margin: 0 0 20px -25px;
 	padding: 0 10px 10px 0;
+	position: relative;
 	overflow: hidden; 
+}
+
+.view-more { 
+	float:left;
+	margin-top: 18px;
 }
 
 header.right { 
@@ -57,6 +64,7 @@ header.right {
 
 .right h2 { 
 	float: right;
+	margin-right: 0;
 	padding: 5px 100px 5px 20px;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;
@@ -102,6 +110,10 @@ nav ul {
 	margin: 0 auto;
 	padding: 0 20px;
 	width: 920px;
+}
+
+.internet-explorer .wrapper { 
+	border: 1px solid #ccc; 
 }
 
 #top,
@@ -186,11 +198,11 @@ nav ul {
 }
 
 #post-it {
-	background: url(../images/postit.png) no-repeat left top;
+	background: url(../images/postit-no-rotation.png) no-repeat left top;
 	height: 185px;
 	position: absolute;
-	right: -15px;
-	top: 50px;
+	right: -25px;
+	top: 35px;
 	width: 440px;
 	z-index: 10;
 }
@@ -204,9 +216,6 @@ nav ul {
 	height: 200px;
 	padding: 25px 30px;
 	width: 400px;
-	
-	-moz-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
 }
 
 #post-it .social {
@@ -264,7 +273,6 @@ nav ul {
 
 .wf-active #page-header .tk-futura-pt {
 	font-size: 20px;
-	font-weight: 300;
 }
 
 #content {
@@ -287,6 +295,10 @@ nav ul {
 	color: #fff;
 	height: 60px;
 	padding: 20px 0;
+}
+
+.internet-explorer #page-footer .wrapper { 
+	border: none; 
 }
 
 #ms2ube-tv { 
@@ -357,6 +369,7 @@ nav ul {
 }
 
 .tweet { 
+	background: #e6eff3;
 	background: rgba(0,91,128,0.1);
 	border-left: 5px solid #E57901;
 	clear: left;
@@ -369,8 +382,9 @@ nav ul {
 	-webkit-box-shadow: rgba(0, 92, 128, 0.2) 2px 2px 4px, rgba(0,0,0,0.1) 0 0 16px inset;
 	        box-shadow: rgba(0, 92, 128, 0.2) 2px 2px 4px, rgba(0,0,0,0.1) 0 0 16px inset;
 }
+
 .tweet time { 
-	 background: #ccc;
+	 background: #d2d5d7;
 	 background: rgba(204,204,204,0.6);
 	 color: #1498CD;
 	 float: right;
@@ -384,6 +398,18 @@ nav ul {
 
 .wf-active .tweets { 
 	font-weight: 400; 
+}
+
+.twitpic img { 
+	width: 360px; 
+}
+
+.twitpic { 
+	float: left; 
+}
+
+.twitpic .tweet { 
+	margin-right: 20px; 
 }
 
 section { 
@@ -428,8 +454,10 @@ section {
 	font-weight: bold; 
 }
 
-#team .social { 
+#team .social {
+	height: 18px; 
 	overflow: hidden;
+	list-style: none;
 	width: 300px; 
 }
 
@@ -486,8 +514,8 @@ section {
 #client-list ul li .pc {
   background-image: url(../images/clients/pc.png);
 }
-#client-list ul li .can30 {
-  background-image: url(../images/clients/can30.png);
+#client-list ul li .gwsa {
+  background-image: url(../images/clients/gwsa.png);
 }
 #client-list ul li .psic {
   background-image: url(../images/clients/psic.png);
@@ -501,8 +529,8 @@ section {
 #client-list ul li .sdcc {
   background-image: url(../images/clients/sdcc.png);
 }
-#client-list ul li .cfnc {
-  background-image: url(../images/clients/cfnc.png);
+#client-list ul li .ckhealth {
+  background-image: url(../images/clients/ck-public-health.png);
 }
 #client-list ul li .pcfdc {
   background-image: url(../images/clients/cfdc_perth.png);
@@ -513,8 +541,8 @@ section {
 #client-list ul li .cfdcw {
   background-image: url(../images/clients/cfdc.png);
 }
-#client-list ul li .mcfdc {
-  background-image: url(../images/clients/cdfc_middlesex.png);
+#client-list ul li .unified {
+  background-image: url(../images/clients/unifiedhome.png);
 }
 #client-list ul li .vic {
   background-image: url(../images/clients/vicwest.png);
