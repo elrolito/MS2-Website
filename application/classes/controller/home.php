@@ -18,11 +18,25 @@ class Controller_Home extends Controller_Layout {
 		                   
 		$items = json_decode($timeline);
 		
-		$tweets = array();
+		$tweets = Cache::instance()->get('tweets');
 		
-		foreach ($items as $item)
+		if ( ! $tweets)
 		{
-			$tweets[] = new Tweet($item);
+			$tweets = array();
+			
+			try
+			{
+				foreach ($items as $item)
+				{
+					$tweets[] = new Model_Tweet($item);
+				}
+				
+				Cache::instance()->set('tweets', $tweets);
+			}
+			catch (Exception $e)
+			{
+				$tweets = NULL;
+			}
 		}
 		
 		$this->view->set('tweets', $tweets);

@@ -1,6 +1,6 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class Tweet {
+class Model_Tweet extends Model {
 	
 	public $id;
 	public $created_at;

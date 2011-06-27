@@ -117,20 +117,25 @@ Kohana::modules(array(
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-Route::set('apis', '<controller>(/<action>(/<id>))', array('controller' => 'twitter|twitvid|youtube'))
-	->defaults(array(
-		'directory' => 'api'
-	));
-Route::set('about', 'about-ms2')
-	->defaults(array(
-		'controller' => 'about'
-	));
-Route::set('home', '')
-	->defaults(array(
-		'controller' => 'home'
-	));
-Route::set('default', '(<controller>(/<action>(/<id>)))')
-	->defaults(array(
-		'controller' => 'home',
-		'action'     => 'index',
-	));
+if ( ! Route::cache())
+{
+	Route::set('apis', '<controller>(/<action>(/<id>))', array('controller' => 'twitter|twitvid|youtube'))
+		->defaults(array(
+			'directory' => 'api'
+		));
+	Route::set('about', 'about-ms2')
+		->defaults(array(
+			'controller' => 'about'
+		));
+	Route::set('home', '')
+		->defaults(array(
+			'controller' => 'home'
+		));
+	Route::set('default', '(<controller>(/<action>(/<id>)))')
+		->defaults(array(
+			'controller' => 'home',
+			'action'     => 'index',
+		));
+	
+	Route::cache(TRUE);
+}

@@ -25,14 +25,21 @@ class Controller_API_Youtube extends Controller_API_Base {
 				}
 				catch (Exception $e)
 				{
-					echo Debug::vars($e);
+					$playlist = NULL;
 				}
 			}
 			
 			if ($this->request->is_ajax())
 			{
-				$model = new Model_YouTube_Playlist($id, $playlist);
-				$body = json_encode($model->projekktor_playlist());
+				try
+				{
+					$model = new Model_YouTube_Playlist($id, $playlist);
+					$body = json_encode($model->projekktor_playlist());
+				}
+				catch (Exception $e)
+				{
+					$body = NULL;
+				}
 			}
 			else
 			{

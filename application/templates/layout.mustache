@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<title>{{title}}</title>
 	
+	<meta name="description" content="(519) 276-0006 MS2 is passionate about the power of video. 
+	WE ARE A HIGH IMPACT VIDEO PRODUCTION COMPANY:
+	Want to get noticed? No Problem! Our job is to craft a powerful message that speaks to your customers - educates prospects, increases conversions and builds brand equity">
+	
 	<link rel="stylesheet" type="text/css" href="{{stylesheet}}" media="all">
 	<link rel="stylesheet" type="text/css" href="{{projekktor_styles}}" media="screen">
 	
@@ -31,7 +35,7 @@
 				<div class="cities">Stratford / Guelph / London</div>
 				<div class="contact">519-276-0006 / {{&contact_email}}</div>
 				<ul class="social">
-		            <li class="facebook"><a href="http://bit.ly/MS2FanPage" rel="external" title="MS2 Fan Page">Facebook</a></li>
+					<li class="facebook"><a href="http://bit.ly/MS2FanPage" rel="external" title="MS2 Fan Page">Facebook</a></li>
 					<li class="twitter"><a href="http://twitter.com/ms2weathergirl" rel="external" title="@ms2weathergirl on Twitter">Twitter</a></li>
 					<li class="youtube"><a href="http://www.youtube.com/user/ms2dotca" rel="external" title="ms2dotca YouTube Channel">YouTube</a></li>
 					<li class="vimeo"><a href="http://vimeo.com/ms2" rel="external social" title="ms2 Vimeo Channel">Vimeo</a></li>
@@ -43,15 +47,19 @@
 	<header id="page-header" class="wrapper drop-shadow lifted">
 		{{>header}}
 	</header>
+	
 	<div class="wrapper" id="content">
 		{{>content}}
 	</div>
+	
 	<footer id="page-footer" class="drop-shadow curved curved-hz-2">
 		<div class="wrapper">
 			<a href="#top">[^] back to top</a>
 			<p id="copyright">Copyright © {{year}} MS2 Production.</p>
 		</div>
 	</footer>
+	
+	<!-- Facebook SDK -->
 	<div id="fb-root"></div>
 	<script>
 	  window.fbAsyncInit = function() {
@@ -65,6 +73,8 @@
 	    document.getElementById('fb-root').appendChild(e);
 	  }());
 	</script>
+	<!-- end Facebook SDK -->
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	{{#has_player}}
 	<script src="{{projekktor_script}}"></script>
