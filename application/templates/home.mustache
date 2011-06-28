@@ -1,0 +1,48 @@
+{{>ms2ube_player}}
+
+<section id="interviews">
+	<header class="tab">
+		<h2>ms2ube vlog</h2>
+		<a class="view-more" href="http://twitvid.com/videos/ms2weathergirl" rel="external">view all on twitvid</a>
+	</header>
+	{{#twitvids}}
+	<iframe title="Twitvid video player" class="twitvid-player" type="text/html" width="300" height="225" src="http://www.twitvid.com/embed.php?guid={{id}}&autoplay=0" frameborder="0"></iframe>
+	{{/twitvids}}
+</section>
+
+<section id="ms2weets" class="block col span-2">
+	<header class="tab">
+		<h2>ms2weets</h2>
+		<a class="view-more" href="http://twitter.com/ms2weathergirl" rel="external">view all tweets</a>
+	</header>
+	<div id="twitter-profile">
+	{{#twitter_profile}}<h3>{{name}} (<a href="http://twitter.com/@{{screen_name}}" rel="external">@{{screen_name}}</a>)</h3>
+		<div class="thumb"><a href="http://twitter.com/@{{screen_name}}" rel="external"><img src="{{profile_image_url}}" alt="Twitter profile pic" /></a></div>
+		<p>{{description}}</p>
+	{{/twitter_profile}}
+	</div>
+	<ul class="tweets tk-futura-pt">
+		{{#tweets}}
+			<li class="tweet">
+				<p>{{& text}}</p>
+				<time pubdate="{{created_at}}">{{timestamp}}</time>
+			</li>
+		{{/tweets}}
+	</ul>
+</section>
+
+<section id="ms2ube-vlog" class="block col span-1">
+	<header class="tab right">
+		<h2>ms2witpic</h2>
+	</header>
+	{{#twitpic}}
+	<figure class="twitpic">
+		<a href="http://twitpic.com/{{id}}" title="view image" rel="external"><img src="http://twitpic.com/show/large/{{id}}" alt="ms2weetpic" class="drop-shadow lifted" /></a>
+		<figcaption class="tweet tk-futura-pt">
+			<p>{{&title}}</p>
+			<p><time pubdate="{{timestamp}}">Uploaded {{fuzzy_time}}</time></p>
+		</figcaption>
+	</figure>
+	{{/twitpic}}
+	<p><a href="http://twitpic.com/photos/ms2weathergirl" title="go to MS2’s Twitpic photos" rel="external">View all of MS2’s Twitpics</a></p>
+</section>
