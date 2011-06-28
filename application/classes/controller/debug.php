@@ -4,13 +4,29 @@ class Controller_Debug extends Controller {
 	
 	public function action_vars()
 	{
-		$playlist = Request::factory('http://gdata.youtube.com/feeds/api/playlists/AA821F2D7F066FBD')
-		               ->query('v', 2)
-		               ->query('alt', 'jsonc')
-		               ->query('orderby', 'published')
-		               ->execute()
-		               ->body();
-		               
-		echo Debug::vars(json_decode($playlist));
+		$api = Request::factory('http://videoadvocate.tumblr.com/api/read')
+		              ->execute()
+		              ->body();
+		
+		$data = new SimpleXMLElement($api);
+		
+		$posts = get_object_vars($data->posts);
+		
+		echo Debug::vars($api, $posts['@attributes']);
+	}
+	
+	public function action_db()
+	{
+		$results = DB::select('*')
+		             ->from('wp_posts')
+		             ->where('post_status', '=', 'publish')
+		             ->where('post_type', '=', 'post')
+		             ->order_by('post_date', 'DESC')
+		             ->execute();
+		
+		foreach ($results as $post)
+		{
+			echo Debug::vars($post);
+		}
 	}
 }
