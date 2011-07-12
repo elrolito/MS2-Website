@@ -25,6 +25,8 @@ class Model_YouTube_Playlist extends Model {
 		{
 			$playlist = array();
 			
+			$counter = 1;
+			
 			foreach ($this->_data->data->items as $item)
 			{
 				$video_src = 'http://www.youtube.com/watch?v='.$item->video->id;
@@ -35,10 +37,12 @@ class Model_YouTube_Playlist extends Model {
 						'type' => 'video/youtube',
 					),
 					'config' => array(
-						'title' => $item->video->title,
+						'title' => 'Video '.$counter,
 						'desc' => Text::auto_p($item->video->description)
 					)
 				);
+				
+				$counter++;
 			}
 			
 			Cache::instance()->set($this->_playlist_cache_id, $playlist);

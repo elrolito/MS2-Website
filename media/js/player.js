@@ -5,8 +5,8 @@ $(document).ready(function() {
 	playerInstance = projekktor('#main-player', {
 		addplugins: ['Share'],
 		controls: true,
-		width: 960,
-		height: 540,
+		width: 640,
+		height: 360,
 		playlist: [{ 0 : { src : 'youtube/playlist/' + $('#main-player').attr('data-playlist-id'), type: 'text/json' }}]
 	});
 	
@@ -35,4 +35,15 @@ updateShareLinks = function(index) {
 	
 	}
 	
+}
+
+updatePlayerItem = function(data) {
+
+	var index = playerInstance.getItemIdx();
+	
+	updateShareLinks(index);
+	
+	$('#playlist li:visible').fadeOut(500, function() {
+		$('#playlist li').eq(index).delay(200).fadeIn(500);
+	});
 }

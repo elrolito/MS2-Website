@@ -1,4 +1,4 @@
-/* @override http://localhost/ms2/update/media/css/styles.css */
+/* @override http://localhost/ms2/media/css/styles.css */
 
 @import 'reset.css';
 @import 'dropshadows.css';
@@ -116,6 +116,14 @@ nav ul {
 	margin: 0 auto;
 	padding: 0 20px;
 	width: 920px;
+}
+
+.border-wrapper {
+	overflow: hidden;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
+	        box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
 }
 
 .internet-explorer .wrapper { 
@@ -312,16 +320,16 @@ nav ul {
 }
 
 #main-player { 
-	margin-left: -20px; 
+	margin-left: 10px;
 }
 
 #ms2ube-share { 
-	bottom: 575px;
+	bottom: 40px;
 	height: 50px;
+	left: 660px;
 	overflow: hidden;
 	position: absolute;
 	margin-top: 5px;
-	right: -60px;
 	width: 200px;
 }
 
@@ -330,19 +338,20 @@ nav ul {
 }
 
 #playlist {
+	float: right;
 	height: 60px;
 	list-style: none;
-	margin-bottom: 10px;
-	width: 700px;
+	margin: 10px 0 10px 20px;
+	width: 250px;
 }
 
 #playlist li,
-#playlist p { 
-	display: none; 
+#playlist .description {
+	display: none;
 }
 
-#playlist li:first-child { 
-	 display: block;
+#playlist li:first-child {
+	display: block;
 }
 
 #playlist h3 { 
@@ -500,16 +509,23 @@ section {
 	overflow: hidden; 
 }
 
+#client-list li {
+	float: left;
+	margin: 0 16px 20px 0;
+}
+
 #client-list .client {
 	background-position: left top;
 	background-repeat: no-repeat; 
 	display: block;
-	float: left;
 	height: 110px;
-	margin: 0 16px 20px 0;
 	overflow: hidden;
 	text-indent: -999px;
-	width: 290px; 
+	width: 290px;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
+	        box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
 }
 #client-list ul li .uwsc {
   background-image: url(../images/clients/uwsc.png);
