@@ -80,7 +80,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
 Kohana::init(array(
-	'base_url'   => (Kohana::$environment === Kohana::PRODUCTION) ? '/' : '/ms2/update/',
+	'base_url'   => (Kohana::$environment === Kohana::PRODUCTION) ? '/' : '/ms2/',
 	'index_file' => FALSE,
 	'errors'     => Kohana::$environment !== Kohana::PRODUCTION,
 	'profile'    => Kohana::$environment !== Kohana::PRODUCTION,
