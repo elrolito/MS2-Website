@@ -1,4 +1,4 @@
-/* @override http://localhost/ms2/update/media/css/styles.css */
+/* @override http://localhost/ms2/media/css/styles.css */
 
 @import 'reset.css';
 @import 'dropshadows.css';
@@ -15,12 +15,16 @@ h1 {
 	color: #002533;
 	font-size: 30px;
 	margin-bottom: 10px;
-	text-transform: uppercase;
+	word-spacing: .13em;
 }
 
 h3 {
-	color: #1498CD;
+	color: #E57900;
 	font-size: 20px; 
+}
+
+h3.alt {
+	color: #E57900;
 }
 
 .tab h2 {
@@ -57,13 +61,35 @@ p {
 	overflow: hidden; 
 }
 
+.quick-play {
+	font-family: "futura-pt-1","futura-pt-2",sans-serif;
+	list-style: none;
+}
+
+.quick-play li {
+	background: #ddd;
+	border-radius: 10px;
+	float: left;
+	height: 20px;
+	margin-right: 5px;
+	text-align: center;
+	width: 20px;
+}
+
+.quick-play .selected {
+	background: #1498CC;
+}
+.quick-play .selected a {
+	color: #fff;
+}
+
+.quick-play,
 .view-more { 
 	float:left;
-	margin-top: 18px;
+	margin-top: 15px;
 }
 
 header.right { 
-	
 	margin: 0 -25px 20px 0;
 	padding: 0 0 10px 5px;
 }
@@ -116,6 +142,14 @@ nav ul {
 	margin: 0 auto;
 	padding: 0 20px;
 	width: 920px;
+}
+
+.border-wrapper {
+	overflow: hidden;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
+	        box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
 }
 
 .internet-explorer .wrapper { 
@@ -311,42 +345,52 @@ nav ul {
 	position: relative; 
 }
 
+#ms2ube-tv .border-wrapper {
+	height: 360px;
+	height: auto !important;
+	min-height: 360px;
+}
+
 #main-player { 
-	margin-left: -20px; 
+	margin-left: 10px;
 }
 
 #ms2ube-share { 
-	bottom: 575px;
+	bottom: 25px;
 	height: 50px;
+	left: 660px;
 	overflow: hidden;
 	position: absolute;
 	margin-top: 5px;
-	right: -60px;
 	width: 200px;
 }
 
 #ms2ube-fb-like, #ms2ube-tweet { 
-	height: 30px; 
+	height: 25px; 
 }
 
 #playlist {
+	float: right;
 	height: 60px;
 	list-style: none;
-	margin-bottom: 10px;
-	width: 700px;
+	margin: 10px 10px 10px 0;
+	width: 250px;
 }
 
-#playlist li,
-#playlist p { 
-	display: none; 
+#playlist li {
+	display: none;
 }
 
-#playlist li:first-child { 
-	 display: block;
+#playlist li:first-child {
+	display: block;
 }
 
 #playlist h3 { 
 	font-size: 24px; 
+}
+
+#playlist .description {
+	font-size: 14px;
 }
 
 #twitter-profile { 
@@ -500,16 +544,23 @@ section {
 	overflow: hidden; 
 }
 
+#client-list li {
+	float: left;
+	margin: 0 16px 20px 0;
+}
+
 #client-list .client {
 	background-position: left top;
 	background-repeat: no-repeat; 
 	display: block;
-	float: left;
 	height: 110px;
-	margin: 0 16px 20px 0;
 	overflow: hidden;
 	text-indent: -999px;
-	width: 290px; 
+	width: 290px;
+	-webkit-border-top-right-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
+	        box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
 }
 #client-list ul li .uwsc {
   background-image: url(../images/clients/uwsc.png);
