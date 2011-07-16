@@ -11,7 +11,12 @@ class View_Layout extends Kostache_Layout {
 	
 	public $player_script;
 	
-	public $main_script;	
+	public $main_script;
+	
+	public function is_production()
+	{
+		return Kohana::$environment === Kohana::PRODUCTION;
+	}	
 	
 	public function browser()
 	{
