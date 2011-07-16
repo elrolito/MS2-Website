@@ -15,12 +15,16 @@ h1 {
 	color: #002533;
 	font-size: 30px;
 	margin-bottom: 10px;
-	text-transform: uppercase;
+	word-spacing: .13em;
 }
 
 h3 {
-	color: #1498CD;
+	color: #E57900;
 	font-size: 20px; 
+}
+
+h3.alt {
+	color: #E57900;
 }
 
 .tab h2 {
@@ -57,13 +61,35 @@ p {
 	overflow: hidden; 
 }
 
+.quick-play {
+	font-family: "futura-pt-1","futura-pt-2",sans-serif;
+	list-style: none;
+}
+
+.quick-play li {
+	background: #ddd;
+	border-radius: 10px;
+	float: left;
+	height: 20px;
+	margin-right: 5px;
+	text-align: center;
+	width: 20px;
+}
+
+.quick-play .selected {
+	background: #1498CC;
+}
+.quick-play .selected a {
+	color: #fff;
+}
+
+.quick-play,
 .view-more { 
 	float:left;
-	margin-top: 18px;
+	margin-top: 15px;
 }
 
 header.right { 
-	
 	margin: 0 -25px 20px 0;
 	padding: 0 0 10px 5px;
 }
@@ -319,12 +345,18 @@ nav ul {
 	position: relative; 
 }
 
+#ms2ube-tv .border-wrapper {
+	height: 360px;
+	height: auto !important;
+	min-height: 360px;
+}
+
 #main-player { 
 	margin-left: 10px;
 }
 
 #ms2ube-share { 
-	bottom: 40px;
+	bottom: 25px;
 	height: 50px;
 	left: 660px;
 	overflow: hidden;
@@ -334,19 +366,18 @@ nav ul {
 }
 
 #ms2ube-fb-like, #ms2ube-tweet { 
-	height: 30px; 
+	height: 25px; 
 }
 
 #playlist {
 	float: right;
 	height: 60px;
 	list-style: none;
-	margin: 10px 0 10px 20px;
+	margin: 10px 10px 10px 0;
 	width: 250px;
 }
 
-#playlist li,
-#playlist .description {
+#playlist li {
 	display: none;
 }
 
@@ -356,6 +387,10 @@ nav ul {
 
 #playlist h3 { 
 	font-size: 24px; 
+}
+
+#playlist .description {
+	font-size: 14px;
 }
 
 #twitter-profile { 

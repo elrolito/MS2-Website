@@ -1,6 +1,11 @@
 <section id="ms2ube-tv" class="block">
 	<header class="tab">
 		<h2>ms2ube TV</h2>
+		<ul class="quick-play">
+		{{#ms2ube_playlist}}
+			<li><a href="#{{index}}">{{index}}</a></li>
+		{{/ms2ube_playlist}}
+		</ul>
 		<a class="view-more" href="http://youtube.com/user/ms2dotca" rel="external">view all on youtube</a>
 	</header>
 	<div class="border-wrapper">
@@ -11,7 +16,7 @@
 				<div class="description">
 					{{&description}}
 				</div>
-				<p><time>Uploaded {{timestamp}}</time></p>
+				<!--<p><time>Uploaded {{timestamp}}</time></p>-->
 			</li>
 		{{/ms2ube_playlist}}
 		</ul>

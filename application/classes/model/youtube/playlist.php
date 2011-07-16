@@ -59,15 +59,20 @@ class Model_YouTube_Playlist extends Model {
 		if ( ! $info)
 		{
 			$info = array();
+			
+			$counter = 1;
 		
 			foreach ($this->_data->data->items as $item)
 			{
 				$info[] = array(
+					'index' => $counter,
 					'link' => 'http://youtu.be/'.$item->video->id,
 					'title' => $item->video->title,
 					'description' => Text::auto_p($item->video->description),
 					'timestamp' => Date::fuzzy_span(strtotime($item->video->uploaded))	
 				);
+				
+				$counter++;
 			}
 			
 			Cache::instance()->set($this->_info_cache_id, $info);

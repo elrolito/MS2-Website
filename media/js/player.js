@@ -16,6 +16,15 @@ $(document).ready(function() {
 		updateShareLinks(0);
 	}
 	
+	$('.quick-play a').click(function() {
+		var index = $('.quick-play a').index(this);
+		
+		updateQuickPlayLinks(index);
+		playerInstance.setActiveItem(index);
+		
+		return false;
+	});
+	
 });
 
 updateShareLinks = function(index) {
@@ -42,8 +51,14 @@ updatePlayerItem = function(data) {
 	var index = playerInstance.getItemIdx();
 	
 	updateShareLinks(index);
+	updateQuickPlayLinks(index);
 	
 	$('#playlist li:visible').fadeOut(500, function() {
 		$('#playlist li').eq(index).delay(200).fadeIn(500);
 	});
+}
+
+updateQuickPlayLinks = function(index) {
+	$('.quick-play li').removeClass('selected');
+	$('.quick-play li').eq(index).addClass('selected');
 }
