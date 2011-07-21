@@ -165,7 +165,7 @@ nav ul {
 }
 
 #top {
-	background: #fff;
+	background: #fff url(../images/top-bg.png) repeat-x left -50px;
 	border-bottom: 1px solid #fff;
 	height: 170px;
 	padding-bottom: 10px;

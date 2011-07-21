@@ -17,7 +17,8 @@ class Controller_API_Youtube extends Controller_API_Base {
 					$playlist = Request::factory('http://gdata.youtube.com/feeds/api/playlists/'.$id)
 					               ->query('v', 2)
 					               ->query('alt', 'jsonc')
-					               ->query('orderby', 'published')
+					               ->query('orderby', 'position')
+					               ->query('max-results', 10)
 					               ->execute()
 					               ->body();
 					
