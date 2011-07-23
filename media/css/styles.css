@@ -393,6 +393,16 @@ nav ul {
 	font-size: 14px;
 }
 
+#vlog .vlog-wrapper {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.youtube-player {
+	float: left;
+	margin-right: 5px;
+}
+
 #twitter-profile { 
 	margin-bottom: 10px;
 	padding-left: 60px; 

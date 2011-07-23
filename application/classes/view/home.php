@@ -12,7 +12,7 @@ class View_Home extends View_Layout {
 	public $ms2ube_playlist_id = 'AA821F2D7F066FBD';
 	public $ms2ube_playlist;
 	
-	public $twitvids;
+	public $vlog;
 	
 	public $twitpic;
 }

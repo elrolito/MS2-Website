@@ -67,6 +67,7 @@ class Model_YouTube_Playlist extends Model {
 				$info[] = array(
 					'index' => $counter,
 					'link' => 'http://youtu.be/'.$item->video->id,
+					'embed' => 'http://youtube.com/embed/'.$item->video->id,
 					'title' => $item->video->title,
 					'description' => Text::auto_p($item->video->description),
 					'timestamp' => Date::fuzzy_span(strtotime($item->video->uploaded))	

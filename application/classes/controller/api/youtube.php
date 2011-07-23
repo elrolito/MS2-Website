@@ -6,6 +6,8 @@ class Controller_API_Youtube extends Controller_API_Base {
 	{
 		$id = $this->request->param('id', FALSE);
 		
+		$count = (isset($_GET['results'])) ? $_GET['results'] : 10;
+		
 		if ($id)
 		{
 			$playlist = Cache::instance()->get('playlist_'.$id);
@@ -18,7 +20,7 @@ class Controller_API_Youtube extends Controller_API_Base {
 					               ->query('v', 2)
 					               ->query('alt', 'jsonc')
 					               ->query('orderby', 'position')
-					               ->query('max-results', 10)
+					               ->query('max-results', $count)
 					               ->execute()
 					               ->body();
 					
