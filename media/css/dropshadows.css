@@ -3,6 +3,7 @@
 	position: relative;
 	width: 100%;
 	-webkit-box-shadow: rgba(0, 92, 128, 0.2) 0 0 4px, rgba(0,0,0,0.1) 0 0 16px inset;
+	-moz-box-shadow: rgba(0, 92, 128, 0.2) 0 0 4px, rgba(0,0,0,0.1) 0 0 16px inset;
 	        box-shadow: rgba(0, 92, 128, 0.2) 0 0 4px, rgba(0,0,0,0.1) 0 0 16px inset;
 }
 
@@ -21,16 +22,19 @@
 	max-width: 480px;
 	width: 50%;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 10px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 10px;
 	        box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 10px;
-	-webkit-transform:rotate(-3deg);
-	-moz-transform:rotate(-3deg);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	transform: rotate(-3deg);
 }
 
 .lifted::after {
 	right: 10px;
 	left: auto;
-	-webkit-transform:rotate(3deg);
-	-moz-transform:rotate(3deg);
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	transform: rotate(3deg);
 }
 
 .curved::before {
@@ -40,6 +44,7 @@
 	right: 50%;
 	top: 10px;
 	-webkit-box-shadow: rgba(0,0,0,0.6) 0 0 15px;
+	-moz-box-shadow: rgba(0,0,0,0.6) 0 0 15px;
 	        box-shadow: rgba(0,0,0,0.6) 0 0 15px;
 }
 
@@ -48,6 +53,8 @@
 }
 
 .curved-hz::before {
+	-webkit-border-radius: 100px / 10px;
+	-moz-border-radius: 100px / 10px;
 	border-radius: 100px / 10px;
 	bottom: 0;
 	left: 10px;
@@ -60,13 +67,16 @@
 	left: 15px;
 	right: 15px;
 	top: 0;
+	-webkit-border-radius: 100px / 10px;
+	-moz-border-radius: 100px / 10px;
 	border-radius: 100px / 10px;
 }
 
 .curled {
-    border:1px solid #efefef; 
-    -moz-border-radius:0 0 120px 120px / 0 0 6px 6px;    
-         border-radius:0 0 120px 120px / 0 0 6px 6px;
+    border: 1px solid #efefef; 
+    -webkit-border-radius: 0 0 120px 120px / 0 0 6px 6px; 
+    -moz-border-radius: 0 0 120px 120px / 0 0 6px 6px;    
+         border-radius :0 0 120px 120px / 0 0 6px 6px;
 }
 
 .curled:before,

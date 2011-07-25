@@ -1,0 +1,33 @@
+<section id="quote" class="block col span-2">
+	<header class="tab">
+		<h2>Free Quote</h2>
+	</header>
+	
+	<form id="quote-form" method="post">
+		<fieldset>
+			<legend>Your info:</legend>
+			<ol>
+				<li><label for="name">Name: </label><input type="text" name="name" placeholder="John Doe" class="required" required /></li>
+				<li><label for="phone">Phone Number: </label><input type="text" name="phone" placeholder="xxx-xxx-xxxx" class="phone" /></li>
+				<li><label for="email">Email: </label><input type="text" name="email" placeholder="name@email.com" class="required email" required /></li>
+			</ol>
+		</fieldset>
+		<fieldset>
+			<legend>Your message:</legend>
+			<textarea name="message" class="required" required></textarea>
+		</fieldset>
+		<input type="type" name="extra" value="" class="extra" />
+		<input type="submit" value="Send" />
+		{{#show_message}}<div class="message">{{message}}</div>{{/show_message}}
+	</form>
+</section>
+
+<section id="contact-info" class="block col span-1">
+	<header class="tab right">
+		<h2>Contact Info</h2>
+	</header>
+	<p>For more information contact <b>Melissa Schenk</b>:</p>
+	<p><b>Tel:</b> 519-276-0006</p>
+	<p><b>Fax:</b> 519-679-0281</p>
+	<p>89 Sir Adam Beck Road<br>Stratford, ON<br>N5A 8B9</p>
+</section>

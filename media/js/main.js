@@ -9,6 +9,30 @@ $(document).ready(function() {
 	
 	$('a[rel=external]').attr('target', 'external');
 	
+	if ($('#quote-form')) {
+		$.getScript('media/js/jquery.validate.min.js', function() {
+			$('#quote-form').validate({
+				submitHandler: function(form) {
+					$('.error').hide();
+					form.submit();
+				},
+				messages: {
+					email: {
+						required: 'An email is required.',
+					},
+					name: {
+						required: 'Please enter your name.'
+					},
+					message: {
+						required: 'Please add a message.'
+					}
+				}
+			});
+		});
+		
+		$('.message').delay(3000).fadeOut(500);
+	}
+	
 });
 
 resizeContentArea = function() {

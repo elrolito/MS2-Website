@@ -53,12 +53,16 @@ class Controller_Home extends Controller_Layout {
 		
 		$this->view->partial('ms2ube_player', 'partials/ms2ube_player');
 		
-		// Twitvids (ms2ube mobile)
-		$twitvids = Request::factory('twitvid/playlist')
-		                               ->execute()
-		                               ->body();
+		// Vlog
+		$vlog_data = Request::factory('youtube/playlist/94F99707686679FC')
+		                    ->query('results', 3)
+		                    ->execute()
+		                    ->body();
 		
-		$this->view->twitvids = json_decode($twitvids);
+		$vlog = new Model_YouTube_Playlist('94F99707686679FC', $vlog_data);
+		$this->view->vlog = $vlog->playlist_info();
+		
+		$this->view->partial('vlog', 'partials/ms2_vlog');
 		
 		// Twitpic
 		$twitpic = Request::factory('twitter/twitpic')

@@ -4,15 +4,15 @@ class Controller_Debug extends Controller {
 	
 	public function action_vars()
 	{
-		$api = Request::factory('http://videoadvocate.tumblr.com/api/read')
-		              ->execute()
-		              ->body();
+		$vlog_data = Request::factory('youtube/playlist/94F99707686679FC')
+		                    ->query('results', 3)
+		                    ->execute()
+		                    ->body();
 		
-		$data = new SimpleXMLElement($api);
+		$vlog = new Model_YouTube_Playlist('94F99707686679FC', $vlog_data);
+		//$test = $vlog->playlist_info();
 		
-		$posts = get_object_vars($data->posts);
-		
-		echo Debug::vars($api, $posts['@attributes']);
+		echo Debug::vars($vlog_data, $vlog);
 	}
 	
 	public function action_db()
