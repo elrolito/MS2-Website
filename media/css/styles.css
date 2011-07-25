@@ -685,3 +685,40 @@ section {
 #client-list ul li .samsonite {
   background-image: url(../images/clients/samsonite.png);
 }
+
+#quote-form ol {
+	list-style: none;
+	padding-top: 10px;
+}
+#quote-form li {
+	margin-bottom: 10px;
+}
+#quote-form legend {
+	font-size: 18px;
+	font-weight: bold;
+}
+#quote-form label {
+	display: block;
+}
+#quote-form input,
+#quote-form textarea {
+	border: 1px solid #ccc;
+	font-size: 12px;
+	padding: 4px;
+	width: 360px;
+}
+#quote-form textarea {
+	height: 150px;
+	margin-top: 10px;
+}
+#quote-form input[type=submit] {
+	width: 150px;
+}
+#quote-form input[type=submit]:hover {
+	background: #E57900;
+	color: #fff;
+	cursor: pointer;
+}
+#quote-form .extra {
+	display: none;
+}
