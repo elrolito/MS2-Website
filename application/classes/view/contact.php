@@ -4,5 +4,6 @@ class View_Contact extends View_Layout {
 	
 	public $title = 'Contact us for a quote!';
 	
-	
+	public $message;
+	public $show_message = FALSE;
 }

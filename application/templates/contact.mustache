@@ -7,17 +7,18 @@
 		<fieldset>
 			<legend>Your info:</legend>
 			<ol>
-				<li><label for="name">Name: </label><input type="text" name="name" placeholder="John Doe" required /></li>
-				<li><label for="phone">Phone Number: </label><input type="text" name="phone" placeholder="xxx-xxx-xxxx" /></li>
-				<li><label for="email">Email: </label><input type="text" name="email" placeholder="name@email.com" required /></li>
+				<li><label for="name">Name: </label><input type="text" name="name" placeholder="John Doe" class="required" required /></li>
+				<li><label for="phone">Phone Number: </label><input type="text" name="phone" placeholder="xxx-xxx-xxxx" class="phone" /></li>
+				<li><label for="email">Email: </label><input type="text" name="email" placeholder="name@email.com" class="required email" required /></li>
 			</ol>
 		</fieldset>
 		<fieldset>
 			<legend>Your message:</legend>
-			<textarea name="message"></textarea>
+			<textarea name="message" class="required" required></textarea>
 		</fieldset>
 		<input type="type" name="extra" value="" class="extra" />
 		<input type="submit" value="Send" />
+		{{#show_message}}<div class="message">{{message}}</div>{{/show_message}}
 	</form>
 </section>
 

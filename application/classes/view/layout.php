@@ -55,11 +55,11 @@ class View_Layout extends Kostache_Layout {
 		/*array(
 			'name' => 'Social Media',
 			'href' => 'social-media'
-		),
+		),*/
 		array(
 			'name' => 'Contact',
 			'href' => 'contact'
-		)*/
+		)
 	);
 	
 	public function nav()
