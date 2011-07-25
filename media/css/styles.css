@@ -38,7 +38,12 @@ h3.alt {
 	text-transform: lowercase;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
 	-webkit-box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
+	-moz-box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
 	        box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
 }
 
@@ -98,10 +103,15 @@ header.right {
 	float: right;
 	margin-right: 0;
 	padding: 5px 100px 5px 20px;
+	-webkit-border-radius: 0;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;
-	-webkit-border-top-right-radius: 0;
-	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius: 0;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-radius: 0;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
 }
 
 a,
@@ -148,7 +158,12 @@ nav ul {
 	overflow: hidden;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
 	-webkit-box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
+	-moz-box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
 	        box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
 }
 
@@ -160,6 +175,8 @@ nav ul {
 #page-header {
 	-webkit-border-bottom-left-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;
 	        border-bottom-left-radius: 4px;
 	        border-bottom-right-radius: 4px;
 }
@@ -198,9 +215,12 @@ nav ul {
 	
 	-webkit-border-bottom-left-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	-moz-border-radius-bottomright: 4px;
 	        border-bottom-left-radius: 4px;
 	        border-bottom-right-radius: 4px;
 	-webkit-box-shadow: rgba(255,255,255,0.2) 0 0 16px inset;
+	-moz-box-shadow: rgba(255,255,255,0.2) 0 0 16px inset;
 	        box-shadow: rgba(255,255,255,0.2) 0 0 16px inset;
 	
 	-webkit-transition: padding 0.2s ease-out, color 0.4s ease;
@@ -218,6 +238,7 @@ nav ul {
 	padding-top: 30px;
 	
 	-webkit-box-shadow: rgba(0,0,0,0.2) 0 0 16px inset;
+	-moz-box-shadow: rgba(0,0,0,0.2) 0 0 16px inset;
 	        box-shadow: rgba(0,0,0,0.2) 0 0 16px inset;
 }
 
@@ -323,9 +344,12 @@ nav ul {
 	overflow: hidden;
 	padding: 20px;
 	-webkit-box-shadow: rgba(0, 92, 128, 0.2) 0 0 4px, rgba(0, 0, 0, 0.4) 0px 15px 10px, rgba(0,0,0,0.1) 0 0 40px inset;
+	-moz-box-shadow: rgba(0, 92, 128, 0.2) 0 0 4px, rgba(0, 0, 0, 0.4) 0px 15px 10px, rgba(0,0,0,0.1) 0 0 40px inset;
 	        box-shadow: rgba(0, 92, 128, 0.2) 0 0 4px, rgba(0, 0, 0, 0.4) 0px 15px 10px, rgba(0,0,0,0.1) 0 0 40px inset;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
 	        border-top-left-radius: 4px;
 	        border-top-right-radius: 4px;
 }
@@ -439,7 +463,12 @@ nav ul {
 	padding: 5px 20px 5px 5px;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
 	-webkit-box-shadow: rgba(0, 92, 128, 0.2) 2px 2px 4px, rgba(0,0,0,0.1) 0 0 16px inset;
+	-moz-box-shadow: rgba(0, 92, 128, 0.2) 2px 2px 4px, rgba(0,0,0,0.1) 0 0 16px inset;
 	        box-shadow: rgba(0, 92, 128, 0.2) 2px 2px 4px, rgba(0,0,0,0.1) 0 0 16px inset;
 }
 
@@ -452,7 +481,10 @@ nav ul {
 	 padding: 2px 5px;
 	 margin: 5px -30px 0 0;
 	 -webkit-border-radius: 4px;
+	 -moz-border-radius: 4px;
+	 border-radius: 4px;
 	 -webkit-box-shadow: rgba(0, 92, 128, 0.2) 2px 2px 4px, rgba(0,0,0,0.1) 0 0 16px inset;
+	 -moz-box-shadow: rgba(0, 92, 128, 0.2) 2px 2px 4px, rgba(0,0,0,0.1) 0 0 16px inset;
 	        box-shadow: rgba(0, 92, 128, 0.2) 2px 2px 4px, rgba(0,0,0,0.1) 0 0 16px inset;
 }
 
@@ -494,6 +526,7 @@ section {
 	margin-right: 10px;
 	width: 60px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px, rgba(0,0,0,0.2) 0 0 16px inset;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px, rgba(0,0,0,0.2) 0 0 16px inset;
 	        box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 4px, rgba(0,0,0,0.2) 0 0 16px inset;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -569,7 +602,12 @@ section {
 	width: 290px;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
 	-webkit-box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
+	-moz-box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
 	        box-shadow: rgba(0, 92, 128, 0.6) 0 2px 4px, rgba(0,0,0,0.3) 0 0 16px inset;
 }
 #client-list ul li .uwsc {
