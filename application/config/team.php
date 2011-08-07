@@ -43,7 +43,7 @@ return array(
 	array(
 		'name' => 'Rob Osburn',
 		'short_name' => 'rob',
-		'role' => 'Technical Director / Editor',
+		'role' => 'Director, Post-Production Supervisor',
 		'social_links' => array(
 			array(
 				'kind' => 'facebook',
@@ -55,7 +55,7 @@ return array(
 	array(
 		'name' => 'Natalja Róbertsdóttir',
 		'short_name' => 'natalja',
-		'role' => 'Creative Designer / Makeup Artist / Stylist',
+		'role' => 'Make-up / Art Department',
 		'social_links' => array(
 			array(
 				'kind' => 'facebook',
@@ -84,5 +84,17 @@ return array(
 			'kind' => 'twitter',
 			'link' => 'http://twitter.com/elrolito'
 		)
+	),
+	array(
+		'name' => 'Christina Ienna',
+		'short_name' => 'christina',
+		'role' => 'Creative Production',
+		'social_links' => NULL
+	),
+	array(
+		'name' => 'David Ross',
+		'short_name' => 'david',
+		'role' => 'Creative Production',
+		'social_links' => NULL
 	)
 );
