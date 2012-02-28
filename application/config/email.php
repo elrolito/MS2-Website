@@ -2,9 +2,10 @@
 return array(
 	'driver' => 'smtp',
 	'options' => array(
-		'hostname' => 'roloscope.netfirms.com',
-		'username' => 'design@roloscope.com',
-		'password' => 'Ca443ikP#',
-		'port'     => '587'
+		'hostname' => 'securemail.myhosting.com',
+		'username' => 'admin@ms2.ca',
+		'password' => 't0rnad0',
+		'port'     => '587',
+		'encryption' => 'ssl'
 	)
 );

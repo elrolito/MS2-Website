@@ -6,7 +6,7 @@ class Controller_Clients extends Controller_Layout {
 	{
 		$playlist_id = $this->view->ms2ube_playlist_id;
 		
-		$ms2ube_data = Request::factory('youtube/playlist/'.$playlist_id)
+		$ms2ube_data = Request::factory('youtube/playlist/'.$playlist_id.'?results=20')		                          
 		                          ->execute()
 		                          ->body();
 		                          

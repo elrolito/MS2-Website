@@ -17,7 +17,7 @@ class Controller_Contact extends Controller_Layout {
 			                  
 			if ($post->check())
 			{
-				$to = (Kohana::$environment === Kohana::DEVELOPMENT) ? 'rolo@ms2.ca' : 'melissa@ms2.ca';
+				$to = (Kohana::$environment === Kohana::DEVELOPMENT) ? 'rolo@ms2.ca' : 'ms2productions@sympatico.ca';
 				$from = $post['email'];
 				$subject = 'Quote request via ms2.ca';
 				

@@ -6,7 +6,7 @@ class Controller_API_Youtube extends Controller_API_Base {
 	{
 		$id = $this->request->param('id', FALSE);
 		
-		$count = (isset($_GET['results'])) ? $_GET['results'] : 10;
+		$count = (isset($_GET['results'])) ? $_GET['results'] : 20;
 		
 		if ($id)
 		{
